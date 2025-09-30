@@ -1,0 +1,209 @@
+{
+  "usuarios": [
+    {
+      "id": "1a9f",
+      "email": "gestor@site.com",
+      "senha": "root789",
+      "perfil": "admin",
+      "nome": "Gerente"
+    },
+    {
+      "id": "2b5e",
+      "email": "naomydesouza@email.com",
+      "senha": "123456",
+      "perfil": "usuario",
+      "nome": "Naomy"
+    },
+    {
+      "id": "3c7d",
+      "nome": "Rafael",
+      "email": "rafael.oliveira@gmail.com",
+      "senha": "R4f@123",
+      "perfil": "usuario"
+    },
+    {
+      "id": "4f2a",
+      "nome": "Camila",
+      "email": "camila.lopes@yahoo.com",
+      "senha": "pass7890",
+      "perfil": "usuario"
+    },
+    {
+      "id": "5e6b",
+      "nome": "Thiago",
+      "email": "thiago.martins@outlook.com",
+      "senha": "Tg@345",
+      "perfil": "usuario"
+    },
+    {
+      "id": "6d4c",
+      "nome": "Juliana",
+      "email": "ju.santos@protonmail.com",
+      "senha": "juPass@555",
+      "perfil": "usuario"
+    },
+    {
+      "id": "7f8e",
+      "nome": "Marcelo",
+      "email": "marcelo.ferreira@gmail.com",
+      "senha": "Mrc123456",
+      "perfil": "usuario"
+    },
+    {
+      "id": "4c06",
+      "nome": "saori",
+      "email": "saoricavalo@email.com",
+      "senha": "123456",
+      "perfil": "usuario"
+    }
+  ],
+  "imovel": [
+    {
+      "id": "1",
+      "titulo": "Apartamento com varanda",
+      "corretorId": 1,
+      "tipo": "Apartamento",
+      "cidade": "Santos",
+      "endereco": "Rua das Rosas Mofadas - 473",
+      "preco": 750000,
+      "descricao": "Apartamento arejado com 2 quartos e 1 vaga de garagem.",
+      "imagemUrl": "assets/img/casa2q.png"
+    },
+    {
+      "id": "2",
+      "titulo": "Casa térrea confortável",
+      "corretorId": 1,
+      "tipo": "Casa",
+      "cidade": "Campinas",
+      "endereco": "Av. Pão de Ló - 12",
+      "preco": 480000,
+      "descricao": "Casa com quintal amplo e garagem para 2 carros.",
+      "imagemUrl": "assets/img/casa4q.png"
+    },
+    {
+      "id": "3",
+      "titulo": "Kitnet prática",
+      "corretorId": 1,
+      "tipo": "Casa",
+      "cidade": "São Paulo",
+      "endereco": "Rua Cinderela Pompeu - 23",
+      "preco": 220000,
+      "descricao": "Kitnet compacta, ideal para estudantes ou solteiros.",
+      "imagemUrl": "assets/img/casasla.png"
+    },
+    {
+      "id": "4",
+      "titulo": "Cobertura com vista panorâmica",
+      "corretorId": 1,
+      "tipo": "Casa",
+      "cidade": "Rio de Janeiro",
+      "endereco": "Rua Mário Libertadores - 200",
+      "preco": 1250000,
+      "descricao": "Cobertura de luxo com piscina privativa e área gourmet.",
+      "imagemUrl": "assets/img/casa1q.png"
+    },
+    {
+      "id": "5",
+      "titulo": "Apartamento moderno",
+      "corretorId": 1,
+      "tipo": "Apartamento",
+      "cidade": "Belo Horizonte",
+      "endereco": "Av. Kirara Pessotto - 101",
+      "preco": 380000,
+      "descricao": "Apartamento com 3 quartos, próximo ao comércio local.",
+      "imagemUrl": "assets/img/casa1qrt.png"
+    }
+  ],
+  "interesses": [
+    {
+      "id": "1",
+      "clienteId": 2,
+      "imovelId": 1
+    },
+    {
+      "id": "3f74",
+      "clienteId": "2",
+      "imovelId": "1"
+    },
+    {
+      "id": "087e",
+      "clienteId": "40ec",
+      "imovelId": "1"
+    },
+    {
+      "id": "db8c",
+      "clienteId": "40ec",
+      "imovelId": "2"
+    },
+    {
+      "id": "46e1",
+      "clienteId": "40ec",
+      "imovelId": "3"
+    },
+    {
+      "id": "1cda",
+      "clienteId": "40ec",
+      "imovelId": "4"
+    },
+    {
+      "id": "9a5c",
+      "clienteId": "40ec",
+      "imovelId": "5"
+    },
+    {
+      "id": "8a8d",
+      "clienteId": "40ec",
+      "imovelId": "6"
+    },
+    {
+      "id": "98b9",
+      "clienteId": "40ec",
+      "imovelId": "7"
+    },
+    {
+      "id": "c3b7",
+      "clienteId": "40ec",
+      "imovelId": "8"
+    },
+    {
+      "id": "ab3b",
+      "clienteId": "406c",
+      "imovelId": "1"
+    },
+    {
+      "id": "aa85",
+      "clienteId": "406c",
+      "imovelId": "6"
+    },
+    {
+      "id": "29e8",
+      "clienteId": "406c",
+      "imovelId": "3"
+    },
+    {
+      "id": "bd05",
+      "clienteId": "406c",
+      "imovelId": "8"
+    },
+    {
+      "id": "f39f",
+      "clienteId": "2b5e",
+      "imovelId": "101"
+    },
+    {
+      "id": "995a",
+      "clienteId": "2b5e",
+      "imovelId": "101"
+    },
+    {
+      "id": "dc91",
+      "clienteId": "4c06",
+      "imovelId": "103"
+    },
+    {
+      "id": "4dc3",
+      "clienteId": "4c06",
+      "imovelId": "104"
+    }
+  ]
+}

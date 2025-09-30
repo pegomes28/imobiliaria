@@ -1,0 +1,88 @@
+.detalhe-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background: #f5f5f5;
+  min-height: calc(100vh - 80px); // respeita a navbar
+}
+
+.detalhe-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 700px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.detalhe-card img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  object-fit: contain;
+  max-height: 400px;
+  background: #eee;
+  margin-bottom: 1rem;
+}
+
+.detalhe-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  font-size: 1.1rem;
+}
+
+.detalhe-info h2 {
+  color: #009B77;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  text-align: left;
+}
+
+.detalhe-info p {
+  margin: 0;
+  color: #222;
+}
+
+button {
+  align-self: flex-start;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  background: #009B77;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 1rem;
+}
+
+button:hover {
+  background: #007d5f;
+}
+
+@media (max-width: 800px) {
+  .detalhe-card {
+    padding: 1rem;
+    max-width: 98vw;
+  }
+
+  .detalhe-card img {
+    max-width: 100%;
+    max-height: 250px;
+  }
+
+  .detalhe-info h2 {
+    font-size: 1.4rem;
+  }
+
+  .detalhe-info {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,40 @@
+<div class="navbar">
+  <div class="logo">
+    <img src="assets/img/logo4.png" (click)="RotaHome()" alt="logo">
+  </div>
+</div>
+
+<section class="auth-section">
+  <div class="auth-box">
+    <h2>Cadastro</h2>
+
+    <div class="input-icon">
+      <i class="fa fa-user"></i>
+      <input type="text" placeholder="Nome" [(ngModel)]="dadosCadastro.nome" />
+    </div>
+
+    <div class="input-icon">
+      <i class="fa fa-envelope"></i>
+      <input type="email" placeholder="Email" [(ngModel)]="dadosCadastro.email" />
+    </div>
+
+    <div class="input-icon">
+      <i class="fa fa-lock"></i>
+      <input type="password" placeholder="Senha" [(ngModel)]="dadosCadastro.senha" />
+    </div>
+
+    <button (click)="fazerCadastro()">Cadastrar</button>
+
+    <p>Já possui uma conta?
+      <span class="cadastro-link" (click)="RotaLogin()">Login</span>
+    </p>
+
+    <!-- Mensagem de status -->
+    <div 
+      class="mensagem-status" 
+      [ngClass]="isErro ? 'erro' : 'sucesso'" 
+      *ngIf="mensagemStatus">
+      {{ mensagemStatus }}
+    </div>
+  </div>
+</section>

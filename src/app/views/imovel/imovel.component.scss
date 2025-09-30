@@ -1,0 +1,375 @@
+* {
+  box-sizing: border-box;
+}
+
+.filtros {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.filtros input, .filtros select {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.filtros button {
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: #009b77;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.filtros button:hover {
+  background: #007a5e;
+}
+
+
+
+.navbar {
+  width: 100%;
+  height: 80px;
+  background-color: #009b77;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 20px;
+  position: relative; /* necessário para o menu absoluto */
+  margin-bottom: 32px;
+}
+
+/* Ícone do hambúrguer */
+.menuImg {
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10;
+  /* acima do menu */
+  position: relative;
+  /* necessário para z-index funcionar */
+  padding: 0.2rem 0.5rem 0.5rem 0.5rem;
+}
+
+.menu {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 300px;
+  background-color: #009b77;
+  border-radius: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  z-index: 1000;
+  padding: 0;
+}
+
+.menu.active {
+  max-height: 300px;
+  opacity: 1;
+  padding: 20px 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #111;
+  background: #fff;
+  padding: 10px 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  width: 90%;
+  display: block;
+  box-shadow: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.menu a:hover {
+  color: #009b77;
+}
+
+.logo {
+  margin-left: 10px;
+
+  img {
+    max-width: 18%;
+    height: auto;
+    padding: 0rem 0rem 0rem 0rem;
+  }
+}
+
+/* Media query para telas menores (ex: metade de 1920px ≈ 960px) */
+@media (max-width: 960px) {
+  .logo img {
+    max-width: 35%;
+    padding: 0rem 0rem 0rem 0rem;
+  }
+
+  .user {
+    padding: 0rem 0rem 0rem 0rem;
+
+    font-size: 61px;
+  }
+}
+
+.user {
+  margin-right: 30px;
+  /* Ajuste este valor para mover o ícone mais ou menos para a esquerda */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 41px;
+  color: #fff;
+  cursor: pointer;
+  gap: 1px;
+}
+
+.user-name {
+  color: #fff;
+  font-size: 20px; /* Tamanho da fonte do nome, pode ser ajustado */
+  font-weight: bold; /* Deixa o nome em negrito */
+  padding-left: 10%;
+  white-space: nowrap; /* Impede que o nome quebre em várias linhas */
+}
+
+// Filtros de busca
+.container {
+  width: 90%;
+  max-width: 1400px;
+  height: 100px;
+  margin: 0 auto;
+  border: 3px solid #009b77;
+  border-radius: 30px;
+  padding: 5px; /* Adicione estas duas linhas */
+  display: flex;
+  align-items: center;
+}
+
+.filtros {
+  display: flex;
+  gap: 13px; /* Remova as margens para centralizar */
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: 20px; /* Adiciona um espaço de 20 pixels à esquerda */
+}
+
+.filtros input,
+.filtros select {
+  background: #fff;
+  border: 2px solid #009b77;
+  border-radius: 10px;
+  padding: 10px 49px;
+  font-size: 1.2rem;
+  color: #222;
+  outline: none;
+  min-width: 170px;
+  font-weight: bold;
+  display: flex;
+}
+
+/* Aumenta a seta dos selects */
+.filtros select {
+  font-size: 1.5rem;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23009B77" height="32" viewBox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 18px center;
+  background-size: 32px 32px;
+  padding-right: 48px;
+}
+
+/* Wrapper para input de localização com ícone */
+.filtro-localizacao-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.filtro-localizacao-wrapper i {
+  position: absolute;
+  left: 18px;
+  color: #009b77;
+  font-size: 1.7rem;
+  z-index: 2;
+}
+.filtro-localizacao {
+  padding-left: 44px !important;
+}
+
+.btn-pesquisar {
+  background: #009b77;
+  color: #fff;
+  border: 2px solid #009b77;
+  border-radius: 10px;
+  padding: 10px 22px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-pesquisar:hover {
+  background: #fff;
+  color: #009b77;
+}
+
+// Cards de imóveis
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px; /* Diminui o espaçamento entre os cards */
+  justify-content: center;
+  margin-top: 60px;
+  width: 100%;
+}
+
+.card-imovel {
+  /* Recalcula a largura para 4 cards por linha com o novo espaçamento */
+  flex-basis: calc(25% - 52px);
+  height: auto;
+  border: 3px solid #009b77;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  margin: 0;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.card-imovel:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.container-img {
+  width: 270px;
+  height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  background: #ccc;
+  overflow: hidden;
+
+  .img-card-imovel {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+}
+
+.preco-tipo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: bold;
+  color: #111;
+  padding: 0 16px 10px 16px;
+  margin-bottom: 2px;
+  line-height: 0.2px;
+}
+
+.favorito {
+  color: #009b77;
+  font-size: 1.6rem;
+  cursor: pointer;
+  margin-left: 8px;
+  display: flex;
+  align-items: center;
+
+
+/* Estilo para o ícone de coração preenchido */
+.favorito i {
+  transition: color 0.2s; /* Transição para a cor */
+}
+
+.favorito.ativo i {
+  color: #009b77;
+  font-weight: 900;
+}
+}
+
+.detalhes {
+  width: 100%;
+  font-size: 18px;
+  font-weight: bold;
+  color: #111;
+  padding: 0 16px 20px 16px;
+  margin-bottom: 1px;
+  line-height: 0.2px;
+  justify-content: center;
+}
+
+.endereco {
+  width: 100%;
+  font-size: 16px;
+  color: #222;
+  font-weight: bold;
+  padding: 0 16px 1rem 16px;
+  margin-bottom: 0;
+  line-height: 25px;
+}
+
+@media (max-width: 960px) {
+  .container {
+    flex-direction: row;
+    height: auto;
+    padding: 12px 4px 10px 4px;
+    border-radius: 20px;
+    width: 900px;
+  }
+
+  .filtros {
+    flex-direction: row;
+    gap: 8px;
+    margin-left: 0;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .filtros input,
+  .filtros select {
+    min-width: 190px;
+    width: auto;
+    font-size: 1rem;
+    padding: 10px 12px;
+  }
+
+  .btn-pesquisar {
+    width: auto;
+    font-size: 1rem;
+    padding: 8px 16px;
+    margin-top: 0;
+  }
+
+  .filtro-localizacao-wrapper i {
+    left: 8px;
+    font-size: 1.1rem;
+  }
+  .filtro-localizacao {
+    padding-left: 28px !important;
+  }
+  .card-imovel {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+}

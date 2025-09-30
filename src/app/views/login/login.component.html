@@ -1,0 +1,27 @@
+<div class="navbar">
+
+  <div class="logo" >
+    <img src="assets/img/logo4.png" (click)="RotaHome()" alt="logo">
+  </div>
+</div>
+
+<section class="auth-section">
+  <div class="auth-box">
+    <h2>Login</h2>
+    <div class="input-icon">
+      <i class="fa fa-user"></i>
+      <input type="email" placeholder="Email" [(ngModel)]="credenciais.email" />
+    </div>
+
+    <div class="input-icon">
+      <i class="fa fa-lock"></i>
+      <input type="password" placeholder="Senha" [(ngModel)]="credenciais.senha" />
+    </div>
+
+    <button (click)="fazerLogin()">Entrar</button>
+
+    <p>Ainda não possui conta?
+      <span class="cadastro-link" (click)="RotaCadastro()">Cadastre-se</span>
+    </p>
+  </div>
+</section>

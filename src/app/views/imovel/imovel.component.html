@@ -1,0 +1,59 @@
+<div class="navbar">
+  <div class="menuImg" #menuIcon (click)="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <div class="menu" #menu [class.active]="menuAtivo">
+    <a href="/imovel">Imóveis</a>
+    <a href="/meus-interesses">Interesses</a>
+    <a href="/home">Logout</a>
+  </div>
+
+  <div class="logo">
+    <img src="assets/img/logo4.png" alt="logo">
+  </div>
+
+  <div class="user" *ngIf="authService.currentUser$ | async as user">
+    <i class="fas fa-user-circle"></i>
+    <span class="user-name">{{ user.tipo === 'admin' ? 'ADM' : user.nome }}</span>
+  </div>
+</div>
+
+<div class="filtros">
+  <input type="text" placeholder="Pesquisar cidade..." id="pesquisaCidade">
+
+  <select id="filtroTipo">
+    <option value="">Tipo</option>
+    <option value="Apartamento">Apartamento</option>
+    <option value="Casa">Casa</option>
+  </select>
+
+  <select id="filtroAluguel">
+    <option value="">Aluguel</option>
+    <option value="0-1000">Até R$ 1.000</option>
+    <option value="1000-5000">R$ 1.000 - 5.000</option>
+    <option value="5000-1000000">Acima de R$ 5.000</option>
+  </select>
+
+  <button onclick="filtrarImoveis()">Filtrar</button>
+</div>
+
+<div class="cards-container" id="cardsContainer">
+  <!-- Aqui os cards vão ser gerados via JS -->
+</div>
+
+<!-- Cards de imóveis -->
+<div class="cards-container">
+  <div class="card-imovel" *ngFor="let imovel of imoveis">
+    <div class="container-img" [routerLink]="['/imovel', imovel.id]">
+      <img *ngIf="imovel.imagemUrl" [src]="imovel.imagemUrl" alt="Imagem do imóvel" class="img-card-imovel" />
+      <span *ngIf="!imovel.imagemUrl">Sem imagem</span>
+    </div>
+    <div class="titulo">{{ imovel.titulo }}</div>
+    <div class="preco">R$ {{ imovel.preco | number }}</div>
+    <div class="endereco">{{ imovel.endereco }} - {{ imovel.cidade }}</div>
+    <span class="favorito" (click)="toggleFavorito(imovel.id)">
+      <i [ngClass]="isFavorito(imovel.id) ? 'fas fa-heart text-red' : 'far fa-heart'"></i>
+    </span>
+  </div>
+</div>

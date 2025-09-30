@@ -1,0 +1,55 @@
+<div class="navbar">
+  <div class="menuImg" #menuIcon (click)="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <div class="menu" #menu [class.active]="menuAtivo">
+    <a href="/imovel">Imóveis</a>
+    <a href="/meus-interesses">Interesses</a>
+    <a href="/home">Logout</a>
+  </div>
+
+  <div class="logo">
+    <img src="assets/img/logo4.png" alt="logo">
+  </div>
+
+  <div class="user" *ngIf="authService.currentUser$ | async as user">
+  <i class="fas fa-user-circle"></i>
+  <span class="user-name">
+    {{ user.perfil === 'admin' ? 'ADM' : user.nome }}
+  </span>
+</div>
+</div>
+
+<div class="container">
+  <h2>Meus Interesses</h2>
+</div>
+
+<div class="cards-container">
+  <div class="card-imovel" *ngFor="let imovel of imoveisFavoritos">
+    <div class="container-img">
+      <img *ngIf="imovel.imagemUrl" [src]="imovel.imagemUrl" alt="Imagem" class="img-card-imovel" />
+      <span *ngIf="!imovel.imagemUrl">Imagem</span>
+    </div>
+    <div class="preco-tipo">
+      R$ {{ imovel.preco | number }} Aluguel
+      <span class="favorito" (click)="removerFavorito(imovel.id)">
+         <i class="fas fa-heart text-red"></i>
+      </span>
+    </div>
+    <div class="detalhes" *ngIf="imovel.caracteristicas">
+  {{ imovel.caracteristicas.tamanho }} m² - {{ imovel.caracteristicas.quartos }} quartos
+</div>
+<div class="detalhes" *ngIf="!imovel.caracteristicas">
+  {{ imovel.tipo }} - {{ imovel.titulo }}
+</div>
+
+    <div class="endereco">
+      {{ imovel.endereco }}<br>
+      {{ imovel.cidade }}
+    </div>
+  </div>
+  <div *ngIf="imoveisFavoritos.length === 0" class="mensagem-vazio">
+      <p>Você ainda não possui imóveis favoritos.</p>
+  </div>
+</div>

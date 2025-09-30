@@ -1,0 +1,16 @@
+<div class="detalhe-container" *ngIf="imovel">
+  <div class="detalhe-card">
+    <img [src]="imovel.imagemUrl" alt="Imagem do imóvel" />
+
+    <div class="detalhe-info">
+      <h2>{{ imovel.titulo }}</h2>
+      <p><strong>Tipo:</strong> {{ imovel.tipo }}</p>
+      <p><strong>Cidade:</strong> {{ imovel.cidade }}</p>
+      <p><strong>Endereço:</strong> {{ imovel.endereco }}</p>
+      <p><strong>Preço:</strong> {{ imovel.preco | currency:'BRL' }}</p>
+      <p><strong>Descrição:</strong> {{ imovel.descricao }}</p>
+    </div>
+
+    <button (click)="RotaVoltar()">Voltar</button>
+  </div>
+</div>
