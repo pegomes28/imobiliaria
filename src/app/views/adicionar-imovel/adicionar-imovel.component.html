@@ -1,0 +1,21 @@
+
+<div class="detalhe-container">
+  <div class="detalhe-card">
+    <h2>Adicionar Novo Imóvel</h2>
+
+    <form (ngSubmit)="adicionarImovel()" #imovelForm="ngForm" class="detalhe-info">
+      <input type="text" name="titulo" [(ngModel)]="imovel.titulo" placeholder="Título" required />
+      <input type="text" name="tipo" [(ngModel)]="imovel.tipo" placeholder="Tipo (Apartamento/Casa)" required />
+      <input type="text" name="cidade" [(ngModel)]="imovel.cidade" placeholder="Cidade" required />
+      <input type="text" name="endereco" [(ngModel)]="imovel.endereco" placeholder="Endereço" required />
+      <input type="number" name="preco" [(ngModel)]="imovel.preco" placeholder="Preço" required />
+      <input type="text" name="imagemUrl" [(ngModel)]="imovel.imagemUrl" placeholder="URL da Imagem" />
+      <textarea name="descricao" [(ngModel)]="imovel.descricao" placeholder="Descrição" rows="4"></textarea>
+
+      <div class="botoes">
+        <button type="submit" [disabled]="!imovelForm.form.valid">Adicionar Imóvel</button>
+        <button type="button" (click)="RotaVoltar()">Cancelar</button>
+      </div>
+    </form>
+  </div>
+</div>

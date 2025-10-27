@@ -1,1 +1,46 @@
-<p>corretores works!</p>
+<div class="navbar">
+  <!-- Menu hamburger -->
+  <div class="menuImg" (click)="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <!-- Menu lateral -->
+  <div class="menu" [class.active]="menuAtivo">
+    <a routerLink="/pagina-adm">Imóveis</a>
+    <a routerLink="/meus-interesses">Interesses</a>
+    <a routerLink="/home">Logout</a>
+  </div>
+
+  <!-- Logo -->
+  <div class="logo">
+    <img src="assets/img/logo4.png" alt="logo">
+  </div>
+
+  <!-- Usuário -->
+  <div class="user" *ngIf="authService.currentUser$ | async as user">
+    <i class="fas fa-user-circle"></i>
+    <span class="user-name">{{ user.tipo === 'admin' ? 'ADM' : user.nome }}</span>
+  </div>
+</div>
+
+<!-- Botão adicionar imóvel -->
+<div class="adm-container">
+  <button class="btn-add" [routerLink]="['/adicionar-imovel']">Adicionar Imóvel</button>
+</div>
+
+<!-- Cards de imóveis -->
+<div class="cards-container">
+  <div class="card-imovel" *ngFor="let imovel of imoveis">
+    <div class="container-img">
+      <img *ngIf="imovel.imagemUrl" [src]="imovel.imagemUrl" alt="Imagem do imóvel" class="img-card-imovel" />
+      <span *ngIf="!imovel.imagemUrl">Sem imagem</span>
+    </div>
+    <div class="titulo">{{ imovel.titulo }}</div>
+    <div class="preco">R$ {{ imovel.preco | number }}</div>
+    <div class="endereco">{{ imovel.endereco }} - {{ imovel.cidade }}</div>
+    <div class="acoes">
+      <button class="editar" (click)="editarImovel(imovel.id)">Editar</button>
+      <button class="excluir" (click)="excluirImovel(imovel.id)">Excluir</button>
+    </div>
+  </div>
+</div>

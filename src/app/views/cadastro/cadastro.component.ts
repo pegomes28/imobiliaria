@@ -52,7 +52,7 @@ export class CadastroComponent {
 
         setTimeout(() => {
           this.router.navigate(['/login']);
-        }, 3000);
+        }, 3011);
       },
       error: (err: any) => {
         // Mensagem de erro para falha na API (ex: e-mail já cadastrado)

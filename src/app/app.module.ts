@@ -10,12 +10,13 @@ import { LoginComponent } from './views/login/login.component';
 import { CadastroComponent } from './views/cadastro/cadastro.component';
 import { ImovelComponent } from './views/imovel/imovel.component';
 import { MeusInteressesComponent } from './views/meus-interesses/meus-interesses.component';
-import { CorretoresComponent } from './views/corretores/corretores.component';
+import { PaginaAdmComponent } from './views/corretores/corretores.component';
 import { FooterComponent } from './templates/footer/footer.component';
 import { HeaderComponent } from './templates/header/header.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DetalheImovelComponent } from './views/detalhes-imovel/detalhes-imovel.component';
+import { AdicionarImovelComponent } from './views/adicionar-imovel/adicionar-imovel.component';
 
 @NgModule({
   declarations: [
@@ -25,10 +26,11 @@ import { DetalheImovelComponent } from './views/detalhes-imovel/detalhes-imovel.
     CadastroComponent,
     ImovelComponent,
     MeusInteressesComponent,
-    CorretoresComponent,
+    PaginaAdmComponent,
     FooterComponent,
     HeaderComponent,
     DetalheImovelComponent,
+    AdicionarImovelComponent,
   ],
   imports: [
     BrowserModule,

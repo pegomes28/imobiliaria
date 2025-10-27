@@ -1,0 +1,88 @@
+.detalhe-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background: #f5f5f5;
+  min-height: calc(100vh - 80px); // respeita a navbar
+}
+
+.detalhe-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 700px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.detalhe-card h2 {
+  color: #009B77;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.detalhe-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.detalhe-info input,
+.detalhe-info textarea {
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  width: 100%;
+  outline: none;
+}
+
+.detalhe-info textarea {
+  resize: vertical;
+}
+
+.botoes {
+  display: flex;
+  gap: 1rem;
+}
+
+button {
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  background: #009B77;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #007d5f;
+}
+
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+@media (max-width: 800px) {
+  .detalhe-card {
+    padding: 1rem;
+    max-width: 98vw;
+  }
+
+  .detalhe-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .detalhe-info input,
+  .detalhe-info textarea {
+    font-size: 0.9rem;
+  }
+}

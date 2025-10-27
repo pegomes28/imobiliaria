@@ -1,0 +1,213 @@
+* {
+  box-sizing: border-box;
+}
+
+.navbar {
+  width: 100%;
+  height: 80px;
+  background-color: #009B77;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  position: relative;
+}
+
+/* Logo */
+.logo img {
+  max-width: 22%;
+  height: auto;
+  margin-left: 10px;
+}
+
+/* Menu */
+.menuImg {
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.menu {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 260px;
+  background-color: #009B77;
+  border-radius: 25px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: .3s ease;
+}
+.menu.active {
+  opacity: 1;
+  max-height: 240px;
+  padding: 20px 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #111;
+  background: #fff;
+  padding: 10px 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  width: 90%;
+  display: block;
+  box-shadow: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+/* User */
+.user {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 34px;
+}
+.user-name {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+/* Botão adicionar */
+.btn-add {
+  width: 300px;
+  height: 55px;
+  margin: 40px auto;
+  display: block;
+  background: #009B77;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+}
+.btn-add:hover {
+  background: #fff;
+  border: 3px solid #009B77;
+  color: #009B77;
+}
+
+/* Cards */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  /* Diminui o espaçamento entre os cards */
+  justify-content: center;
+  margin-top: 60px;
+  width: 100%;
+}
+
+.card-imovel {
+  /* Recalcula a largura para 4 cards por linha com o novo espaçamento */
+  flex-basis: calc(25% - 52px);
+  height: auto;
+  border: 3px solid #009b77;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  margin: 0;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.card-imovel:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.container-img {
+  width: 270px;
+  height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  background: #ccc;
+  overflow: hidden;
+
+  .img-card-imovel {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+}
+
+.preco-tipo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: bold;
+  color: #111;
+  padding: 0 16px 10px 16px;
+  margin-bottom: 2px;
+  line-height: 0.2px;
+}
+.endereco {
+  font-size: 17px;
+}
+.favorito i {
+  color: #009B77;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+/* Ações */
+.acoes {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 12px;
+}
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: 14px;
+  padding: 6px 12px;
+  border: none;
+}
+.editar {
+  background: #fff;
+  border: 1px solid #009B77;
+  color: #009B77;
+}
+.excluir {
+  background: #009B77;
+  color: #fff;
+}
+
+/* Footer */
+.footer {
+  margin-top: 40px;
+  width: 100%;
+  background: #009B77;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icons {
+  display: flex;
+  gap: 20px;
+  color: #fff;
+  font-size: 30px;
+}
+
+a {
+  color: #fff;
+}
