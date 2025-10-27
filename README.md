@@ -69,12 +69,6 @@ src/
     │   ├── interesse.service.ts
     │   └── interesse.service.spec.ts
     │
-    ├── templates/
-    │   └── header/
-    │       ├── header.component.ts
-    │       ├── header.component.html
-    │       ├── header.component.scss
-    │       └── header.component.spec.ts
     │
     ├── views/
     │   ├── adicionar-imovel/
