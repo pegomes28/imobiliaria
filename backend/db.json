@@ -55,6 +55,13 @@
       "email": "saoricavalo@email.com",
       "senha": "123456",
       "perfil": "usuario"
+    },
+    {
+      "id": "30b2",
+      "nome": "Tiago Tavares",
+      "email": "tititavares@email.com",
+      "senha": "123456",
+      "perfil": "usuario"
     }
   ],
   "imovel": [
